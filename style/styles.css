@@ -1,6 +1,268 @@
-.fondo_web {
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Krona One', sans-serif;
+    color: white; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo_pan {
+    position: absolute;
+    top: 10px; 
+    left: 20px; 
+    width: 15vw;
+    height: 15vw;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navegacion_inferior{
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navegacion_superior {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navegacion_inferior_productos {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.contenedor {
+    background-image: url('../assets/pan integral.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    gap: 20px; /* Espacio entre los elementos hijos */
+}
+
+.contenedor_productos{
+    background-image: url('../assets/pan integral.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al inicio (arriba) */
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    padding-top: -10px; /* Espacio para el logo */
+    gap: 30px; /* Espacio entre los elementos hijos */
+}
+
+.texto_principal {
+    font-family: 'montserrat', sans-serif;
+    font-size: 3rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+.texto_principal_dos{
+    font-family: 'montserrat', sans-serif;
+    font-size: 3rem;
+    margin-top: -50px;
+    text-shadow: 2px 2px 4px #000;
+}
+.texto_producto{
+    font-family: 'montserrat', sans-serif;
+    font-size: 3rem;
+    margin-top: -10px;
+    text-shadow: 2px 2px 4px #000;
+}
+.texto_solgan {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    margin-top: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+.texto_secundario {
+    font-family: 'montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-top: -300px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.texto_contacto{
+    font-family: 'montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-top: -150px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.whatsapp_grupo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo_whatsapp {
+    height: 80px;
+}
+
+.texto_whatsapp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.foto_producto{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-top: -50px;
+}
+
+.botones {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px 24px;
+    width: 150px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.botones:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 24px 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+.productos_con_imagenes {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 40px; /* Aumento un poco el gap para que se note */
+    padding: 20px 0;
+}
+
+.producto-item {
+    text-align: center; /* Para centrar la imagen y el texto dentro de su propia caja */
+    width: 250px; /* Establece un ancho máximo para cada producto */
+}
+
+.texto_producto {
+   display: block; 
+   margin-top: 8px;
+   font-family:'montserrat', sans-serif;
+   font-size: 1.5rem; /* Reduzco un poco el tamaño para mejor legibilidad */
+   text-shadow: 1px 1px 2px #000000;
+   color: #333; /* Color oscuro para el texto */
+   text-align: center;
+}
+
+.valor_producto {
     display: block;
-    margin: 0 auto;
-}   
+    margin-top: 4px;
+    font-family: 'montserrat', sans-serif;
+    font-size: 1.5rem; 
+    color: #ffffff; /* Color gris para el precio */
+    text-align: center;
+}
+/* Estilos existentes para tus productos, etc. */
+
+/* Estilos para el fondo del modal */
+.modal-fondo {
+    position: fixed; /* Fija el modal en la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    display: flex; /* Para centrar el contenido */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+/* Estilos para el contenedor del contenido del modal */
+.modal-contenido {
+    position: relative; /* Para posicionar el botón de cierre */
+    background-color: white; /* Fondo blanco para la imagen */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%; /* Ancho máximo para la imagen */
+    max-height: 90%; /* Alto máximo para la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para la imagen ampliada */
+.imagen-ampliada {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor del modal */
+    max-height: 85vh; /* Ajusta la imagen al alto de la ventana, dejando espacio */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    object-fit: contain; /* Asegura que la imagen completa sea visible sin cortarse */
+}
+
+/* Estilos para el botón de cierre */
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaaaaa;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que esté encima de la imagen */
+    line-height: 20px; /* Ajusta la altura de línea para el 'x' */
+}
+
+.modal-cerrar:hover,
+.modal-cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
